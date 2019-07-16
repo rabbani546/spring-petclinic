@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: canp
-        image: kanthreg.azurecr.io/sample
+        image: kanthreg.azurecr.io/petclinic
         imagePullPolicy: Always
         ports:
         - containerPort: 8020
