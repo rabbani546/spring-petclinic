@@ -2,7 +2,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: hello
+  name: petclinic
 spec:
   selector:
     matchLabels:
@@ -14,9 +14,8 @@ spec:
         app: pets
     spec:
       containers:
-      - name: canp
-        image: azooaksdemo.azurecr.io/petclinic
-        tag: $(Build.BuildId)
+      - name: petclinic-container
+        image: azooaksdemo.azurecr.io/petclinic:$(Build.BuildId)
         imagePullPolicy: Always
         ports:
         - containerPort: 8020
@@ -26,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: sepe
+  name: petservice
   labels:
     app: pets
 spec:
