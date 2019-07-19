@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: canp
-        image: kanthreg.azurecr.io/petclinic
+        image: azooaksdemo.azurecr.io/petclinic
+        tag: $(Build.BuildId)
         imagePullPolicy: Always
         ports:
         - containerPort: 8020
