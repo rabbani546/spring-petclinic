@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: petclinic-container
-        image: azooaksdemo.azurecr.io/petclinic:3837
+        image: azooaksdemo.azurecr.io/petclinic:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8020
