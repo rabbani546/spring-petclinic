@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: petclinic-container
-        image: azooaksdemo.azurecr.io/petclinic:$(Build.BuildId)
+        image: azooaksdemo.azurecr.io/petclinic:3837
         imagePullPolicy: Always
         ports:
         - containerPort: 8020
